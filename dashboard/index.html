@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Pulse Radar — pre-token protocols ranked by implied value</title>
+<link rel="icon" href="data:,">
+<link rel="stylesheet" href="app.css">
+</head>
+<body>
+<header class="top">
+  <div class="brand"><span class="pulse" aria-hidden="true"></span><div><h1>PULSE RADAR</h1><p>Pre-token protocols, ranked by what their token would be worth</p></div></div>
+  <div class="meta" id="meta">Loading the snapshot…</div>
+</header>
+<nav class="tabs" id="tabs" aria-label="Views">
+  <button data-tab="board" class="on">Board</button>
+  <button data-tab="live">Live tokens</button>
+  <button data-tab="model">Model &amp; sandbox</button>
+</nav>
+<section class="stats" id="stats" aria-label="Headline figures"></section>
+<section class="toolbar" id="toolbar">
+  <label>Search <input id="q" type="search" placeholder="Protocol, chain or category…" autocomplete="off"></label>
+  <label>Category <select id="cat"><option value="all">All categories</option></select></label>
+  <label>Chain <select id="chain"><option value="all">All chains</option></select></label>
+  <label>Sort <select id="sort">
+    <option value="implied">Implied value ↓</option>
+    <option value="tvl">TVL ↓</option>
+    <option value="growth">7d growth ↓</option>
+    <option value="age">Age ↓</option>
+  </select></label>
+  <label class="check"><input id="watch" type="checkbox"> Watchlist only</label>
+  <span class="count" id="count"></span>
+</section>
+<main id="board" aria-live="polite"></main>
+<aside class="drawer" id="drawer" aria-label="Protocol detail" hidden></aside>
+<footer>
+  <p>Implied value is this radar's own claim, from the snapshot's figures — never a prediction that a token will be issued, or when. A protocol records no token today; that is the snapshot's record, not proof it has none. Data: DefiLlama public API, frozen snapshot. No network: every byte on this page ships with it.</p>
+</footer>
+<script src="../data.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
